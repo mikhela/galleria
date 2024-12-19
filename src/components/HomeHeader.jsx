@@ -3,9 +3,7 @@ import useFetch from '../hooks/useFetch'
 const HomeHeader = () => {
   const { data, error, loading } = useFetch("../db/data.json"); 
 
-  console.log("Loading state:", loading);
-  console.log("Error state:", error);
-  console.log("Fetched data:", data);
+ 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
